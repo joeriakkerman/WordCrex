@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controllers.ObserverController">
+   <children>
+    <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="1366.0" style="-fx-background-color: C8C8C8;">
+         <children>
+            <JFXButton fx:id="btnExit" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#exit">
+               <graphic>
+                  <FontAwesomeIconView fill="#c64242" glyphName="WINDOW_CLOSE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#goBack">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox style="-fx-background-color: #273469;" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <JFXComboBox fx:id="cbGameStatus" onAction="#selectGameState" focusColor="WHITE" promptText="Alle Statussen" stylesheets="@../css/Textfield.css" unFocusColor="WHITE" HBox.hgrow="ALWAYS" />
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox style="-fx-background-color: #1e2749;">
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label text="Games" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXListView fx:id="lvGames" style="-fx-padding: 0; -fx-background-insets: none; -fx-background-color: #17203f;" stylesheets="@../css/lvObserverGames.css" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="90.0" left="30.0" top="70.0" />
+               </padding>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <GridPane HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="EYE" size="30" />
+                              <Label prefHeight="36.0" prefWidth="129.0" text="Observer" textFill="WHITE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView id="iconWinaar1" fx:id="iconPlayer1" fill="#fff315" glyphName="TROPHY" selectionEnd="0" selectionStart="1" size="25" textAlignment="JUSTIFY" wrappingWidth="26.85714340209961" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="44.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                              <Label fx:id="lblPlayer1" text="Pieter" textFill="WHITE" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblScorePlayer1" text="521" textFill="WHITE" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label text="-" textFill="WHITE" GridPane.columnIndex="5">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblScorePlayer2" text="594" textFill="WHITE" GridPane.columnIndex="6">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblPlayer2" text="Arnold" textFill="WHITE" GridPane.columnIndex="7">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView id="iconWinnaar2" fx:id="iconPlayer2" fill="#fff315" glyphName="TROPHY" selectionEnd="0" selectionStart="1" size="25" textAlignment="JUSTIFY" wrappingWidth="26.85714340209961" x="10.0" GridPane.columnIndex="8">
+                                 <font>
+                                    <Font size="44.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                           </children>
+                        </GridPane>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Canvas fx:id="canvas" height="700.0" width="700.0" HBox.hgrow="ALWAYS" />
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#leftClick">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="50" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#rightClick">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="ARROW_RIGHT" size="50" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox style="-fx-background-color: #1e2749;">
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label text="Zetten" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXListView fx:id="lvTurns" style="-fx-padding: 0; -fx-background-insets: none; -fx-background-color: #17203f;" stylesheets="@../css/lvObserverHistory.css" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="90.0" right="30.0" top="70.0" />
+               </padding>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

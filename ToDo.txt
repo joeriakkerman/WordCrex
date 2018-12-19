@@ -1,0 +1,41 @@
+- = te doen
+* = gedaan
+
+----- Requirements -----
+
+* Speler kan zien wie er aan de beurt is binnen het spel ( essentieel ) -> staat wel in gamecontroller maar niet in matchcontroller -> het lijkt mij (mike) zo goed
+- Programma toont na het indienen van een woord het <resultaat> ( essentieel )
+- 	<resultaat> = bijgewerkte score en <beurthistory> en het aantal letters in de pot die over zijn ( essentieel ) //aantal letters en score is gedaan//
+- 	<beurthistory = lijst van alle beurten met gelegd (hoofd)woord. hand, beurtscore met eventuele bonus ( essentieel )
+- Speler kan <beurthistory> bekijken ( belangrijk )
+* Speler kan chatten met een tegenspeler in een beëindigd spel ( gewenst )
+- Progamma toont de spelers, de spelscore en of een spel bezig of geëindigd is bij observer ( belangrijk )
+* Observer kan een spel kiezen dat <bezig> of <geëindigd> is ( belangrijk )
+* Observer kan het speelbord bekijken (van het gekozen spel) ( belangrijk )
+- Observer kan de <hand> bekijken van beide spelers (van het gekozen spel ) ( belangrijk )
+* Observer kan voorwaarts en achterwaarts door de gedane beurten (zetten) <bladeren> ( belangrijk )
+* 	<bladeren> = een stap naar een aangrenzende beurt doen en dat herhalen ( belangrijk )
+* 	Programma toont de <spelinformatie> van die beurt ( belangrijk )
+*		<spelinformatie> = het speelbord ( belangrijk )
+* 		<spelinformatie> = het woord dat gelegd werd door beide spelers ( belangrijk )
+* 		<spelinformatie> = de behaalde score ( belangrijk )
+
+----- Andere taken -----
+
+* checkForWord check if connected to other word!
+* checkForWord (score berekenen en zorgen dat je woorden aan kan leggen waar een al bestaande boardletter tussen ligt) DONE, BUT WE NEED TO TEST THIS A LOT FOR POSSIBLE BUGS!!!
+* Views van Jesse updaten -> status per gamecell van gameslijst in observer en combobox
+* Set game state to finishd so the game is inactive
+- Show message who won the turn with the word, username and score (volgens mij(mike) hoeft dit niet)
+* Show message who won the match
+* Disable hand and buttons on the left ( Except resign ) when it's not your turn or when the match is inactive TESTEN
+* Score updaten als er een nieuwe turn wordt aangemaakt (setLabels())
+* Als alle letters zijn gebruikt of alle spelers passen, en er minder dan zeven letters over zijn, stopt het spel
+* IN PASS MOETEN WE OOK HETZELFDE DOEN ALS BIJ onMove, WANT ALS DE 2E SPELER PASST, DAN MOET ER OOK EEN NIEUWE HAND AANGEMAAKT WORDEN!
+* Laten zien wie er heeft opgegeven in de inactiveCell
+- De eventueel overgebleven handletters van de winnende speler worden aangevuld tot zeven
+* Middelste vakje staat voor 3 keer woordwaarde
+* Als je alle 7 handletters gebruikt krijg je 100 punten bij je score
+* Als een nieuw gelegd woord meer dan 1 multiplier bevat wordt eerst de letter vermenigvuldigd en daarna het woord vermenigvultigd
+* Het moet mogelijk zijn om meer dan 1 woord te leggen per beurt (checkForWord())
+- wanneer player2 woord aanlegt en onmove aanroept, moet matchupdaten en daarna movehistory updaten. Dit werkt niet, maar wanneer je de matchcontroller opnieuw opent werkt het opeens wel (regel 223 staat toch echt de juiste code naar mijn beleving (in onMove))

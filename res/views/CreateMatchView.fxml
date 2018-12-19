@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controllers.CreateMatchController">
+   <children>
+    <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="1366.0" style="-fx-background-color: C8C8C8;">
+         <children>
+            <JFXButton fx:id="btnExit" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#exit">
+               <graphic>
+                  <FontAwesomeIconView fill="#c64242" glyphName="WINDOW_CLOSE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#goBack">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <HBox fx:id="menu">
+      	     <children>
+      	        <VBox style="-fx-background-color: #406e8e;" HBox.hgrow="NEVER">
+      	           <children>
+      	              <JFXButton fx:id="btnGame" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#btnGameClicked" prefHeight="70.0" prefWidth="70.0" textFill="TRANSPARENT">
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font size="1.0" />
+      	                 </font>
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnGameView" fill="#ffffff00" glyphName="GAMEPAD" selectionFill="#686767" size="40" stroke="WHITE" strokeWidth="2.0" />
+      	                 </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnAdmin" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnAdminClicked" prefHeight="70.0" prefWidth="70.0" text="Admin" textAlignment="CENTER" textFill="WHITE">
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <graphic>
+      	                    <FontAwesomeIconView fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnModerator" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnModeratorClicked" prefHeight="70.0" prefWidth="70.0" text="Moderator" textFill="WHITE">
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnAdminView1" fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnObserver" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnObserverClicked" prefHeight="70.0" prefWidth="70.0" text="Observer" textFill="WHITE">
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnAdminView11" fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+                        <Region VBox.vgrow="ALWAYS" />
+   		              <JFXButton fx:id="btnSettings" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#btnSettingsClicked" prefHeight="70.0" prefWidth="70.0">
+   		                 <graphic>
+   		                    <FontAwesomeIconView fx:id="btnSettingsView" fill="#ffffff00" glyphName="GEAR" size="35" stroke="WHITE" strokeWidth="2.0" />
+   		                 </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+   		              </JFXButton>
+      	           </children>
+      	        </VBox>
+      	     </children>
+      	  </HBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <FontAwesomeIconView fill="TRANSPARENT" glyphName="GAMEPAD" size="40" stroke="BLACK" strokeWidth="2.0" />
+                        <Label text="Spel aanmaken">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <StackPane maxHeight="150.0" style="-fx-background-color: c8c8c8;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity">
+                          <children>
+                            <ImageView fx:id="ivWordCrex" fitHeight="115.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                <Image url="@../images/WordCrex_Logo_Black.png" />
+                              </image>
+                            </ImageView>
+                            <Label fx:id="lblWordCrex" text="WordCrex" textFill="WHITE">
+                              <font>
+                                <Font size="20.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox StackPane.alignment="CENTER">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-image: url('images/Board_Dark.jpeg'); -fx-background-size: cover;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                       	  <Label fx:id="lblError" alignment="CENTER" text="" textAlignment="CENTER" textFill="#c91c1c" visible="false">
+						                     <font>
+						                        <Font name="System Bold" size="13.0" />
+						                     </font>
+						                  </Label>
+                                          <GridPane alignment="CENTER" vgap="30.0" StackPane.alignment="CENTER">
+                                            <columnConstraints>
+                                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label fx:id="playerOne" text="Label" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="VS" textFill="WHITE" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="playerTwo" text="Label" textFill="WHITE" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#start" style="-fx-background-color: #406e8e;" text="Start spel" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                             <StackPane.margin>
+                                                <Insets left="50.0" right="50.0" />
+                                             </StackPane.margin>
+                                          </GridPane>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox style="-fx-background-color: #406e8e;">
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label text="Vrienden" textFill="WHITE" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <JFXListView fx:id="lvFriends" onMouseClicked="#itemClicked" style="-fx-padding: 0; -fx-background-insets: none;" stylesheets="@../css/lvUitnodigingen.css" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children></StackPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

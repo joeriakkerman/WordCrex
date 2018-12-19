@@ -1,0 +1,41 @@
+.list-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell:even {
+	-fx-background-color: #9AC7DF;
+}
+
+.list-view .list-cell:odd {
+	-fx-background-color: #9AC7DF;
+}
+
+.list-view .list-cell:hover{
+	-fx-background-color: #C7D8E1;
+}
+
+.list-view .list-cell:empty:hover{
+	-fx-background-color: #9AC7DF;
+}
+
+
+
+
+.list-view .scroll-bar:vertical {
+    -fx-background-color: #9AC7DF;
+    -fx-padding: 2;
+}
+
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-color: #406e8e;
+}
+
+.list-view .scroll-bar:vertical .increment-arrow {
+   -fx-background-color: #406e8e;
+   -fx-padding: 2;
+}
+
+.list-view .scroll-bar:vertical .decrement-arrow {
+   -fx-background-color: #406e8e;
+   -fx-padding: 2;
+}

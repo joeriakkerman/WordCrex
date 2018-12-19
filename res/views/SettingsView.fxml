@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controllers.SettingsController">
+   <children>
+    <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="1366.0" style="-fx-background-color: C8C8C8;">
+         <children>
+            <JFXButton fx:id="btnExit" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#exit">
+               <graphic>
+                  <FontAwesomeIconView fill="#c64242" glyphName="WINDOW_CLOSE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#goBack">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <HBox fx:id="menu">
+      	     <children>
+      	        <VBox style="-fx-background-color: #406e8e;" HBox.hgrow="NEVER">
+      	           <children>
+      	              <JFXButton fx:id="btnGame" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#btnGameClicked" prefHeight="70.0" prefWidth="70.0" textFill="TRANSPARENT">
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font size="1.0" />
+      	                 </font>
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnGameView" fill="#ffffff00" glyphName="GAMEPAD" selectionFill="#686767" size="40" stroke="WHITE" strokeWidth="2.0" />
+      	                 </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnAdmin" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnAdminClicked" prefHeight="70.0" prefWidth="70.0" text="Admin" textAlignment="CENTER" textFill="WHITE">
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <graphic>
+      	                    <FontAwesomeIconView fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnModerator" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnModeratorClicked" prefHeight="70.0" prefWidth="70.0" text="Moderator" textFill="WHITE">
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnAdminView1" fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnObserver" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnObserverClicked" prefHeight="70.0" prefWidth="70.0" text="Observer" textFill="WHITE">
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnAdminView11" fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+                        <Region VBox.vgrow="ALWAYS" />
+   		              <JFXButton fx:id="btnSettings" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#btnSettingsClicked" prefHeight="70.0" prefWidth="70.0">
+   		                 <graphic>
+   		                    <FontAwesomeIconView fx:id="btnSettingsView" fill="#ffffff00" glyphName="GEAR" size="35" stroke="WHITE" strokeWidth="2.0" />
+   		                 </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+   		              </JFXButton>
+      	           </children>
+      	        </VBox>
+      	     </children>
+      	  </HBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <FontAwesomeIconView fill="TRANSPARENT" glyphName="GEAR" size="40" stroke="BLACK" strokeWidth="2.0" />
+                        <Label text="Instellingen">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <StackPane maxHeight="150.0" style="-fx-background-color: c8c8c8;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity">
+                          <children>
+                            <ImageView fx:id="ivWordCrex" fitHeight="115.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                <Image url="@../images/WordCrex_Logo_Black.png" />
+                              </image>
+                            </ImageView>
+                            <Label fx:id="lblWordCrex" text="WordCrex" textFill="WHITE">
+                              <font>
+                                <Font size="20.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox>
+                           <children>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox style="-fx-background-color: #8ea8c3;">
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label text="Wachtwoord veranderen" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="lblError" text="Label" visible="false" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <StackPane>
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" StackPane.alignment="CENTER">
+                                             <children>
+                                                <GridPane vgap="25.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="NEVER" />
+                                                      <ColumnConstraints hgrow="NEVER" />
+                                                      <ColumnConstraints prefWidth="225.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints vgrow="SOMETIMES" />
+                                                      <RowConstraints vgrow="SOMETIMES" />
+                                                      <RowConstraints vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <JFXPasswordField fx:id="txtNewPassword" prefHeight="26.0" promptText="Nieuw wachtwoord" stylesheets="@../css/Textfield.css" GridPane.columnIndex="2">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="TEXT" />
+                                                         </cursor>
+                                                      </JFXPasswordField>
+                                                      <JFXPasswordField fx:id="txtConfirmPassword" prefHeight="26.0" promptText="Bevestig wachtwoord" stylesheets="@../css/Textfield.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                         <cursor>
+                                                            <Cursor fx:constant="TEXT" />
+                                                         </cursor>
+                                                      </JFXPasswordField>
+                                                   </children>
+                                                </GridPane>
+                                                <JFXButton defaultButton="true" onAction="#changePassword" prefHeight="32.0" style="-fx-background-color: #953b45;" text="Wachtwoord wijzigen" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                              <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox style="-fx-background-color: #8ea8c3;">
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label text="Woordsuggesties" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="lblError1" text="Label" visible="false" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <JFXTextField fx:id="txtNewWord" promptText="Nieuw woord" stylesheets="@../css/Textfield.css">
+                                                   <VBox.margin>
+                                                      <Insets bottom="20.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                                <HBox>
+                                                   <children>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                      <JFXButton fx:id="btnWordSuggest" defaultButton="true" onAction="#addWord" prefHeight="32.0" style="-fx-background-color: #953b45;" text="Woord toevoegen" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </JFXButton>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <VBox alignment="CENTER" fillWidth="false" />
+                                    <HBox VBox.vgrow="ALWAYS">
+                           			  <children>
+                                    	<JFXListView fx:id="lvWords" focusTraversable="false" style="-fx-padding: 0; -fx-background-insets: 0;" stylesheets="@../css/lvMijnBeurt.css" HBox.hgrow="ALWAYS" />
+	                             	   		 	  </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                        			</HBox>
+                                 </children>
+                              </VBox>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox style="-fx-background-color: #8ea8c3;">
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label text="Accountgegevens" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="lblError11" text="Label" visible="false" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <StackPane>
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false">
+                                             <children>
+                                                <GridPane hgap="15.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Naam:" />
+                                                      <Label text="Speler:" GridPane.rowIndex="1" />
+                                                      <Label text="Administrator:" GridPane.rowIndex="2" />
+                                                      <Label text="Moderator:" GridPane.rowIndex="3" />
+                                                      <Label text="Observer:" GridPane.rowIndex="4" />
+                                                      <Label fx:id="lbName" text="Label" GridPane.columnIndex="1" />
+                                                      <Label fx:id="lbPlayer" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label fx:id="lbAdmin" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Label fx:id="lbModerator" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Label fx:id="lbObserver" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children></StackPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

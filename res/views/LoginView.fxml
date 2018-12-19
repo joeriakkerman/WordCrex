@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controllers.LoginController">
+   <children>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="1366.0" style="-fx-background-color: C8C8C8;">
+         <children>
+            <JFXButton fx:id="btnExit" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#exit">
+               <graphic>
+                  <FontAwesomeIconView fill="#c64242" glyphName="WINDOW_CLOSE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <StackPane prefHeight="150.0" style="-fx-background-color: linear-gradient(to right, black 0%, #3B6595 100%) linear-gradient(to right, black 0%, #3B6595 100%);">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity">
+              <children>
+                <ImageView fx:id="ivWordCrex" fitHeight="115.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../images/WordCrex_Logo_Blue.png" />
+                  </image>
+                </ImageView>
+                <Label fx:id="lblWordCrex" text="WordCrex" textFill="WHITE">
+                  <font>
+                    <Font size="20.0" />
+                  </font>
+                </Label>
+              </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <StackPane VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity">
+               <children>
+                   <Label fx:id="lblLogin" prefHeight="68.0" prefWidth="255.0" text="Login">
+                       <font>
+                           <Font name="System Bold" size="22.0" />
+                       </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblError" alignment="CENTER" text="Verkeerde inloggegevens of geen rechten" textAlignment="CENTER" textFill="#c91c1c" visible="false">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <GridPane hgap="7.0" vgap="15.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="NEVER" />
+                      <ColumnConstraints hgrow="NEVER" />
+                        <ColumnConstraints prefWidth="225.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints vgrow="SOMETIMES" />
+                      <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <FontAwesomeIconView fx:id="icoUser" fill="TRANSPARENT" glyphName="USER" size="30" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" text="" GridPane.halignment="CENTER">
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin></FontAwesomeIconView>
+                        <FontAwesomeIconView fx:id="icoLock" fill="TRANSPARENT" glyphName="LOCK" size="30" stroke="BLACK" strokeWidth="2.0" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <rotationAxis>
+                              <Point3D />
+                           </rotationAxis>
+                           <GridPane.margin>
+                              <Insets top="15.0" />
+                           </GridPane.margin></FontAwesomeIconView>
+                        <JFXTextField fx:id="txtUName" prefHeight="26.0" promptText="gebruikersnaam" stylesheets="@../css/Textfield.css" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="txtPass" prefHeight="26.0" promptText="wachtwoord" stylesheets="@../css/Textfield.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXPasswordField>
+                    </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </GridPane>
+                  <JFXButton fx:id="btnLogin" defaultButton="true" onAction="#login" prefHeight="32.0" prefWidth="175.0" style="-fx-background-color: #384667;" text="Inloggen" textFill="WHITE">
+                      <font>
+                          <Font size="16.0" />
+                      </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label fx:id="lblRegister" onMouseClicked="#register" text="Registreren">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

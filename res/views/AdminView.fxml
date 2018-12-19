@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controllers.AdminController">
+   <children>
+    <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="1366.0" style="-fx-background-color: C8C8C8;">
+         <children>
+            <JFXButton fx:id="btnExit" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#exit">
+               <graphic>
+                  <FontAwesomeIconView fill="#c64242" glyphName="WINDOW_CLOSE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#goBack">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <HBox fx:id="menu">
+      	     <children>
+      	        <VBox style="-fx-background-color: #406e8e;" HBox.hgrow="NEVER">
+      	           <children>
+      	              <JFXButton fx:id="btnGame" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#btnGameClicked" prefHeight="70.0" prefWidth="70.0" textFill="TRANSPARENT">
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font size="1.0" />
+      	                 </font>
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnGameView" fill="#ffffff00" glyphName="GAMEPAD" selectionFill="#686767" size="40" stroke="WHITE" strokeWidth="2.0" />
+      	                 </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnAdmin" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnAdminClicked" prefHeight="70.0" prefWidth="70.0" text="Admin" textAlignment="CENTER" textFill="WHITE">
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <graphic>
+      	                    <FontAwesomeIconView fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnModerator" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnModeratorClicked" prefHeight="70.0" prefWidth="70.0" text="Moderator" textFill="WHITE">
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnAdminView1" fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+      	              <JFXButton fx:id="btnObserver" contentDisplay="TOP" focusTraversable="false" onMouseClicked="#btnObserverClicked" prefHeight="70.0" prefWidth="70.0" text="Observer" textFill="WHITE">
+      	                 <graphic>
+      	                    <FontAwesomeIconView fx:id="btnAdminView11" fill="TRANSPARENT" glyphName="USER" size="35" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+      	                 </graphic>
+      	                 <VBox.margin>
+      	                    <Insets bottom="25.0" />
+      	                 </VBox.margin>
+      	                 <font>
+      	                    <Font name="System Bold" size="11.0" />
+      	                 </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+      	              </JFXButton>
+                        <Region VBox.vgrow="ALWAYS" />
+   		              <JFXButton fx:id="btnSettings" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#btnSettingsClicked" prefHeight="70.0" prefWidth="70.0">
+   		                 <graphic>
+   		                    <FontAwesomeIconView fx:id="btnSettingsView" fill="#ffffff00" glyphName="GEAR" size="35" stroke="WHITE" strokeWidth="2.0" />
+   		                 </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+   		              </JFXButton>
+      	           </children>
+      	        </VBox>
+      	     </children>
+      	  </HBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <FontAwesomeIconView fill="TRANSPARENT" glyphName="USER" size="40" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                        <Label text="Administrator">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <StackPane maxHeight="150.0" style="-fx-background-color: c8c8c8;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity">
+                          <children>
+                            <ImageView fx:id="ivWordCrex" fitHeight="115.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                <Image url="@../images/WordCrex_Logo_Black.png" />
+                              </image>
+                            </ImageView>
+                            <Label fx:id="lblWordCrex" text="WordCrex" textFill="WHITE">
+                              <font>
+                                <Font size="20.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox>
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox style="-fx-background-color: #8ea8c3;">
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label text="Zoek op gebruikersnaam" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <VBox>
+                                       <children>
+                                          <JFXTextField fx:id="txtSearch" focusTraversable="false" onKeyReleased="#searchKeyReleased" promptText="Gebruikersnaam" stylesheets="@../css/Textfield.css">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <JFXListView fx:id="lvUsernames" focusTraversable="false" onMouseClicked="#itemClicked" style="-fx-padding: 0; -fx-background-insets: 0;" stylesheets="@../css/lvMijnBeurt.css" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="vBoxUserDetails" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox style="-fx-background-color: #406e8e;">
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="txtUsername" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Region prefHeight="27.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="lblError" alignment="CENTER" text="" textAlignment="CENTER" textFill="#c91c1c" visible="false">
+				                       <font>
+				                          <Font name="System Bold" size="13.0" />
+				                       </font>
+				                    </Label>
+                                    <HBox>
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label text="Huidige rollen" textFill="#333333" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="20.0" top="20.0" />
+                                             </padding>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <VBox.margin>
+                                          <Insets />
+                                          
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <HBox fx:id="vBoxPlayer" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                      <GridPane>
+                                                        <columnConstraints>
+                                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <FontAwesomeIconView fill="#ffffff00" glyphName="USER" size="25" stroke="BLACK" strokeType="INSIDE" />
+                                                            <Label text="Player" GridPane.columnIndex="1" />
+                                                            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onAction="#deletePlayerRole" GridPane.columnIndex="2">
+                                                               <graphic>
+                                                                  <FontAwesomeIconView fill="#c31111" glyphName="TIMES_CIRCLE" size="15" />
+                                                               </graphic>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </GridPane>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox fx:id="vBoxAdmin" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                      <GridPane>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <FontAwesomeIconView fill="#ffffff00" glyphName="USER" size="25" stroke="BLACK" strokeType="INSIDE" />
+                                                            <Label text="Administrator" GridPane.columnIndex="1" />
+                                                            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onAction="#deleteAdminRole" GridPane.columnIndex="2">
+                                                               <graphic>
+                                                                  <FontAwesomeIconView fill="#c31111" glyphName="TIMES_CIRCLE" size="15" />
+                                                               </graphic>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </GridPane>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox fx:id="vBoxModerator" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                      <GridPane>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <FontAwesomeIconView fill="#ffffff00" glyphName="USER" size="25" stroke="BLACK" strokeType="INSIDE" />
+                                                            <Label text="Moderator" GridPane.columnIndex="1" />
+                                                            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onAction="#deleteModeratorRole" GridPane.columnIndex="2">
+                                                               <graphic>
+                                                                  <FontAwesomeIconView fill="#c31111" glyphName="TIMES_CIRCLE" size="15" />
+                                                               </graphic>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </GridPane>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox fx:id="vBoxObserver" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                      <GridPane>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <FontAwesomeIconView fill="#ffffff00" glyphName="USER" size="25" stroke="BLACK" strokeType="INSIDE" />
+                                                            <Label text="Observer" GridPane.columnIndex="1" />
+                                                            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onAction="#deleteObserverRole" GridPane.columnIndex="2">
+                                                               <graphic>
+                                                                  <FontAwesomeIconView fill="#c31111" glyphName="TIMES_CIRCLE" size="15" />
+                                                               </graphic>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </GridPane>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <StackPane HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <HBox StackPane.alignment="CENTER">
+                                                   <children>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                      <JFXComboBox fx:id="cbRoles" promptText="Kies Rollen" visibleRowCount="5" HBox.hgrow="ALWAYS">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </JFXComboBox>
+                                                      <JFXButton fx:id="btnAddRole" contentDisplay="RIGHT" defaultButton="true" onAction="#addRole" style="-fx-background-color: #384667;" text="Toevoegen" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                      <Region HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </StackPane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children></StackPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

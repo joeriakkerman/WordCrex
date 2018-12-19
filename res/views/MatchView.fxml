@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controllers.MatchController">
+   <children>
+    <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="1366.0" style="-fx-background-color: C8C8C8;">
+         <children>
+            <JFXButton fx:id="btnExit" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#exit">
+               <graphic>
+                  <FontAwesomeIconView fill="#c64242" glyphName="WINDOW_CLOSE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onMouseClicked="#goBack">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox style="-fx-background-color: #273469;" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox>
+               <children>
+                  <Region VBox.vgrow="ALWAYS" />
+                  <JFXButton fx:id="btnPlay" focusTraversable="false" graphicTextGap="10.0" onAction="#onMove" text="Zet" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/zet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnShuffle" focusTraversable="false" graphicTextGap="10.0" onAction="#onShuffle" text="Shuffle" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/shuffle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPass" focusTraversable="false" graphicTextGap="10.0" onAction="#onPass" text="Mike Pas" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pass.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPlaceBack" focusTraversable="false" graphicTextGap="10.0" onAction="#onPlaceBack" text="Terugzetten" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/terugzetten.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Region VBox.vgrow="ALWAYS" />
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <JFXButton fx:id="btnResign" focusTraversable="false" onAction="#resign" text="Opgeven" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="TIMES_CIRCLE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <FontAwesomeIconView fx:id="iconWinner1" visible="false" fill="#fff315" glyphName="TROPHY" selectionEnd="0" selectionStart="1" size="25" textAlignment="JUSTIFY" wrappingWidth="26.85714340209961" x="10.0">
+	                         <font>
+	                            <Font size="44.0" />
+	                         </font>
+	                    </FontAwesomeIconView>
+                        <Label fx:id="lblPlayer1" text="Pieter" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblScorePlayer1" text="3" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Label text="-" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblScorePlayer2" text="6" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPlayer2" text="Arnold" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIconView fx:id="iconWinner2" visible="false" fill="#fff315" glyphName="TROPHY" selectionEnd="0" selectionStart="1" size="25" textAlignment="JUSTIFY" wrappingWidth="26.85714340209961" x="10.0" >
+	                         <font>
+	                            <Font size="44.0" />
+	                         </font>
+	                    </FontAwesomeIconView>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label text="Resterend aantal letters: " textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblLetters" text="90 letters" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Canvas fx:id="canvas" height="800.0" width="800.0" HBox.hgrow="ALWAYS" />
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <JFXButton fx:id="btnSwitchLV" focusTraversable="false" graphicTextGap="10.0" onAction="#switchChatAndHistory" text="Zetgeschiedenis" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" size="20" stroke="WHITE" strokeType="INSIDE" />
+                           </graphic>
+                        </JFXButton>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox style="-fx-background-color: #1e2749;">
+                           <children>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Label fx:id="lblTitle" text="Chat" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Region HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox VBox.vgrow="ALWAYS">
+                           <children>
+                              <StackPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <JFXListView fx:id="lvHistory" style="-fx-padding: 0; -fx-background-insets: none; -fx-background-color: #17203f;" stylesheets="@../css/lvChat.css" />
+                                    <JFXListView fx:id="lvMessages" style="-fx-padding: 0; -fx-background-insets: none; -fx-background-color: #17203f;" stylesheets="@../css/lvObserverHistory.css" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="boxChatField" style="-fx-background-color: #1e2749;">
+                           <children>
+                              <JFXTextField fx:id="txtChat" style="-fx-text-inner-color: white;" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" defaultButton="true" onAction="#createMessage" HBox.hgrow="ALWAYS">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="ARROW_RIGHT" size="25" />
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="110.0" right="30.0" top="100.0" />
+               </padding>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

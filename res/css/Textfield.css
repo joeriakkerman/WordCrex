@@ -1,0 +1,27 @@
+.jfx-text-field {
+	-fx-prompt-text-fill: #989898;
+}
+
+.jfx-password-field{
+	-fx-prompt-text-fill: #989898;
+}
+
+.jfx-combo-box {
+	-fx-prompt-text-fill: #FFFFFF;
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #17203F;
+	-fx-border-color: #17203F;
+}
+
+.jfx-combo-box .cell{
+	-fx-prompt-text-fill: #FFFFFF;
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #17203F;
+	-fx-border-color: #17203F;
+}
+
+.jfx-combo-box .cell:hover{
+	-fx-prompt-text-fill: #17203F;
+	-fx-text-fill: #17203F;
+	-fx-background-color: #FFFFFF;
+}
